@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شرکت مهندسی امیر پوشش فرتاک</title>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap');
+
+  body {
+    font-family: 'Vazirmatn', sans-serif;
+    background: #FFB370;
+    color: #2a2a2a;
+    text-align: center;
+    margin: 0;
+    padding: 40px 10px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  h2 {
+    margin: 0 0 35px;
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+
+  .instruction {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    opacity: 0.85;
+  }
+
+  .bank {
+    background: rgba(255,255,255,0.9);
+    border-radius: 18px;
+    padding: 20px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 450px;
+    border: 2px solid #C5E6A6;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .bank:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  }
+
+  .bank h3 {
+    margin-top: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    padding-bottom: 6px;
+  }
+
+  p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  button {
+    background: #C5E6A6;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.3s ease;
+  }
+
+  button:hover {
+    opacity: 0.85;
+  }
+</style>
+</head>
+
+<body>
+
+  <h1>شرکت</h1>
+  <h2>مهندسی امیر پوشش فرتاک</h2>
+
+  <div class="instruction">
+    برای کپی شماره حساب، کارت یا شبا مورد نظر روی گزینه کپی کلیک کنید
+  </div>
+
+  <div class="bank">
+    <h3>حساب بانک سینا</h3>
+    <p>شماره کارت: <span id="sina-card">6393468878570002</span>
+      <button onclick="copyText('sina-card')">کپی</button></p>
+    <p>شماره حساب: <span id="sina-account">446846867001</span>
+      <button onclick="copyText('sina-account')">کپی</button></p>
+    <p>شماره شبا: <span id="sina-shaba">IR92 0590 0468 0044 6846 8670 01</span>
+      <button onclick="copyText('sina-shaba')">کپی</button></p>
+  </div>
+
+  <div class="bank">
+    <h3>حساب بانک ملی</h3>
+    <p>شماره کارت: <span id="melli-card">6037998821370011</span>
+      <button onclick="copyText('melli-card')">کپی</button></p>
+    <p>شماره حساب: <span id="melli-account">0114152664004</span>
+      <button onclick="copyText('melli-account')">کپی</button></p>
+    <p>شماره شبا: <span id="melli-shaba">IR94 0170 0000 0011 4152 6640 04</span>
+      <button onclick="copyText('melli-shaba')">کپی</button></p>
+  </div>
+
+  <div class="bank">
+    <h3>حساب بانک شهر</h3>
+    <p>شماره حساب: <span id="shahr-account">7001004486620</span>
+      <button onclick="copyText('shahr-account')">کپی</button></p>
+    <p>شماره شبا: <span id="shahr-shaba">IR95 0610 0000 0700 1004 4866 20</span>
+      <button onclick="copyText('shahr-shaba')">کپی</button></p>
+  </div>
+
+  <div class="bank">
+    <h3>حساب بانک سرمایه</h3>
+    <p>شماره حساب: <span id="sarmaye-account">16062623699751</span>
+      <button onclick="copyText('sarmaye-account')">کپی</button></p>
+    <p>شماره شبا: <span id="sarmaye-shaba">IR06 0580 1606 0260 2369 9750 01</span>
+      <button onclick="copyText('sarmaye-shaba')">کپی</button></p>
+  </div>
+
+  <div class="bank">
+    <h3>حساب بانک صادرات</h3>
+    <p>شماره حساب: <span id="saderat-account">0118073237004</span>
+      <button onclick="copyText('saderat-account')">کپی</button></p>
+    <p>شماره شبا: <span id="saderat-shaba">IR04 0190 0000 0011 8073 2370 04</span>
+      <button onclick="copyText('saderat-shaba')">کپی</button></p>
+  </div>
+
+
+
+<script>
+function copyText(id) {
+  const text = document.getElementById(id).innerText.replace(/\s/g, '');
+  navigator.clipboard.writeText(text);
+}
+</script>
+
+</body>
+</html>
